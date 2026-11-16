@@ -2,8 +2,42 @@ document.addEventListener('DOMContentLoaded', async () => {
   const list = document.getElementById('bibliography');
   if (!list) return;
 
+  // Recalculate the target position after the bibliography has been inserted
+  // and the browser has completed its initial font/layout pass.
+  function scrollToRequestedReference() {
+    const requestedId = window.location.hash.slice(1);
+    if (!requestedId) return;
+
+    const scrollWhenReady = () => {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          const target = document.getElementById(requestedId);
+          if (!target) return;
+
+          const header = document.querySelector('.site-header');
+          const stickyOffset = header
+            ? Math.max(0, header.getBoundingClientRect().bottom)
+            : 0;
+          const targetTop = target.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({
+            top: Math.max(0, targetTop - stickyOffset - 14),
+            behavior: 'auto'
+          });
+          target.focus({ preventScroll: true });
+        });
+      });
+    };
+
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(scrollWhenReady, scrollWhenReady);
+    } else {
+      scrollWhenReady();
+    }
+  }
+
   try {
     const response = await fetch('content/references.json', {
+      cache: 'no-store',
       headers: { Accept: 'application/json' }
     });
     if (!response.ok) throw new Error('Could not load the bibliography');
@@ -35,18 +69,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     list.replaceChildren(fragment);
 
-    // The browser may process the URL fragment before JavaScript creates
-    // the bibliography items. Scroll after the requested entry exists.
-    const requestedId = decodeURIComponent(window.location.hash.slice(1));
-    if (requestedId) {
-      requestAnimationFrame(() => {
-        const target = document.getElementById(requestedId);
-        if (target) {
-          target.scrollIntoView({ block: 'start', behavior: 'auto' });
-          target.focus({ preventScroll: true });
-        }
-      });
-    }
+    // Handle both direct citation links and later hash changes on this page.
+    scrollToRequestedReference();
+    window.addEventListener('hashchange', scrollToRequestedReference);
   } catch (error) {
     console.error('Bibliography loading failed:', error);
     list.textContent = 'The references could not be loaded.';
