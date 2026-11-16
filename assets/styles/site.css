@@ -793,3 +793,23 @@ body{background:#fff;color:var(--ink)}
     letter-spacing:2.6px;
   }
 }
+
+
+/* Center the References page heading across the full page width */
+.references-page-intro{
+  width:100%;
+  max-width:none!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.references-page-intro .references-heading{
+  display:block;
+  width:100%;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  text-align:center!important;
+}
