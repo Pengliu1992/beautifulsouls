@@ -1,8 +1,8 @@
 (() => {
   const toc=document.getElementById('reader-toc'), title=document.getElementById('reader-title');
-  const meta=document.getElementById('reader-meta'), partLabel=document.getElementById('reader-part');
+  const meta=document.getElementById('reader-meta');
   const body=document.getElementById('reader-body');
-  if(!toc||!title||!meta||!partLabel||!body)return;
+  if(!toc||!title||!meta||!body)return;
   const groups=new Map();
   const escapeHtml=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const citations=t=>escapeHtml(t).replace(/\[(\d+(?:,\s*\d+)*)\]/g,(m,ns)=>'['+ns.split(/,\s*/).map(n=>'<a class="citation" href="references.html#ref-'+n+'" aria-label="Reference '+n+'">'+n+'</a>').join(', ')+']');
@@ -23,7 +23,7 @@
     try{
       const data=await getJson(entry.source),article={...entry,...data};
       document.title=article.title+' | The Framework | Beautiful Souls';
-      partLabel.textContent=article.part;meta.textContent=article.label==='Part opening'?article.part.toUpperCase()+' · OVERVIEW':article.part.toUpperCase()+' · SECTION '+article.label;title.textContent=article.title;document.querySelector('.reader-article')?.classList.toggle('part-opening',article.label==='Part opening');
+      meta.textContent=article.label==='Part opening'?article.part.toUpperCase()+' · OVERVIEW':article.part.toUpperCase()+' · SECTION '+article.label;title.textContent=article.title;document.querySelector('.reader-article')?.classList.toggle('part-opening',article.label==='Part opening');
       body.replaceChildren();
       (article.paragraphs||[]).forEach(text=>{const p=document.createElement('p');p.innerHTML=citations(text);body.appendChild(p);});
       toc.querySelectorAll('a[data-article-id]').forEach(a=>{
