@@ -23,7 +23,10 @@
     try{
       const data=await getJson(entry.source),article={...entry,...data};
       document.title=article.title+' | The Framework | Beautiful Souls';
-      partLabel.textContent=article.part;meta.textContent=article.part.toUpperCase();title.textContent=article.title;
+      const partTitles={'Part I':'The Creator: Ultimate Ground, Origin, and Cause','Part II':'Humanity: Heaven’s Breath in Earthly Clay'};
+      partLabel.textContent=article.part+' — '+(partTitles[article.part]||article.part);
+      meta.textContent=article.part.toUpperCase();
+      title.textContent=article.title;
       body.replaceChildren();
       (article.paragraphs||[]).forEach(text=>{const p=document.createElement('p');p.innerHTML=citations(text);body.appendChild(p);});
       toc.querySelectorAll('a[data-article-id]').forEach(a=>{
@@ -42,12 +45,12 @@
     [...byPart.entries()].forEach(([part,ids],groupIndex)=>{
       const group=document.createElement('section');group.className='toc-part-group';
       const button=document.createElement('button');button.type='button';button.className='toc-part-toggle';
-      button.setAttribute('aria-expanded',groupIndex===0?'true':'false');button.setAttribute('aria-controls','toc-items-'+groupIndex);
+      button.setAttribute('aria-expanded','true');button.setAttribute('aria-controls','toc-items-'+groupIndex);
       const arrow=document.createElement('span');arrow.className='toc-chevron';arrow.setAttribute('aria-hidden','true');arrow.textContent='⌄';
       const name=document.createElement('span');name.className='toc-part-name';
       name.textContent=part==='Part I'?'Part I — The Creator: Ultimate Ground, Origin, and Cause':'Part II — Humanity: Heaven’s Breath in Earthly Clay';
       button.append(arrow,name);
-      const list=document.createElement('div');list.className='toc-part-items';list.id='toc-items-'+groupIndex;list.hidden=groupIndex!==0;
+      const list=document.createElement('div');list.className='toc-part-items';list.id='toc-items-'+groupIndex;list.hidden=false;
       ids.forEach(id=>{
         const e=index.entries[id],a=document.createElement('a');a.href='framework.html?article='+encodeURIComponent(id);
         a.dataset.articleId=id;a.textContent=e.title;
