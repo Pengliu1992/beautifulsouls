@@ -47,7 +47,7 @@
       const name=document.createElement('span');name.className='toc-part-name';
       name.textContent=part==='Part I'?'Part I — The Creator: Ultimate Ground, Origin, and Cause':'Part II — Humanity: Heaven’s Breath in Earthly Clay';
       button.append(arrow,name);
-      const list=document.createElement('div');list.className='toc-part-items';list.id='toc-items-'+n;list.hidden=groupIndex!==0;
+      const list=document.createElement('div');list.className='toc-part-items';list.id='toc-items-'+groupIndex;list.hidden=groupIndex!==0;
       ids.forEach(id=>{
         const e=index.entries[id],a=document.createElement('a');a.href='framework.html?article='+encodeURIComponent(id);
         a.dataset.articleId=id;a.textContent=e.title;
