@@ -710,3 +710,18 @@ body{background:#fff;color:var(--ink)}
     max-width:none;
   }
 }
+
+
+/* Center the complete Contents + Essay workspace with balanced side margins */
+@media(min-width:1200px){
+  .framework-workspace{
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+}
+@media(min-width:851px) and (max-width:1199px){
+  .framework-workspace{
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+}
