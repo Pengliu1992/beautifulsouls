@@ -607,7 +607,7 @@ body{background:#fff;color:var(--ink)}
     padding-right:clamp(20px,2.4vw,42px);
   }
   .framework-workspace{
-    grid-template-columns:420px minmax(0,1fr)!important;
+    grid-template-columns:504px minmax(0,1fr)!important;
     gap:24px;
   }
 }
