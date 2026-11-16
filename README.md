@@ -51,3 +51,6 @@ The six current photographs are loaded from Unsplash, so they are not stored in 
 3. Commit and push to `main`. Cloudflare Pages should deploy automatically.
 
 Cloudflare Pages configuration: leave the build command blank and use the repository root as the build output directory.
+
+## Asset cache version
+When you edit `assets/styles/site.css`, increment the `?v=1` value in the stylesheet link on all six HTML pages (for example, change it to `?v=2`). When you edit `assets/scripts/framework-reader.js`, increment the version in the script link on `framework.html`. This prompts browsers to fetch the updated asset.
