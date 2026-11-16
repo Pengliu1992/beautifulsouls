@@ -750,3 +750,29 @@ body{background:#fff;color:var(--ink)}
     font-size:28.8px!important;
   }
 }
+
+
+
+/* Framework reader title: an additional 10% reduction from the previous size */
+.framework-workspace .reader-article h1{
+  font-size:clamp(27.36px,1.8vw,30.24px)!important;
+}
+.framework-workspace .reader-article.part-opening h1{
+  font-size:clamp(30.96px,2.16vw,35.28px)!important;
+}
+@media(max-width:850px){
+  .framework-workspace .reader-article h1{
+    font-size:clamp(22.32px,3.6vw,28.08px)!important;
+  }
+  .framework-workspace .reader-article.part-opening h1{
+    font-size:clamp(25.92px,3.96vw,30.96px)!important;
+  }
+}
+@media(max-width:560px){
+  .framework-workspace .reader-article h1{
+    font-size:22.32px!important;
+  }
+  .framework-workspace .reader-article.part-opening h1{
+    font-size:25.92px!important;
+  }
+}
