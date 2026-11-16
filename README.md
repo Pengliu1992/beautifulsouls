@@ -15,13 +15,6 @@ A lightweight static website deployed by Cloudflare Pages from the repository ro
 ├── README.md
 ├── assets/
 │   ├── styles/site.css
-│   ├── images/
-│   │   ├── creator-sunrise.webp
-│   │   ├── oneness-tree.webp
-│   │   ├── human-family.webp
-│   │   ├── freedom-hiker.webp
-│   │   ├── hardship-mountains.webp
-│   │   └── meaning-lake.webp
 │   └── scripts/
 │       ├── site.js
 │       ├── framework-reader.js
@@ -38,7 +31,7 @@ A lightweight static website deployed by Cloudflare Pages from the repository ro
 
 ## Where to edit
 
-- **Home page:** edit the six cards in `index.html`. The heading is the hyperlink; the description below it is plain text. Each card has a local image under `assets/images/` and an image `alt` description. Replace the corresponding WebP file to change a photo.
+- **Home page:** edit the six cards in `index.html`. Each card contains its heading link, concise summary, primary image URL, backup image URL, and image `alt` text. Replace the `src` and `data-fallback` values to change a photo.
 - **Other page text:** edit `explorations.html`, `modern-life.html`, or `about.html`.
 - **Framework essay wording:** edit the corresponding JSON file in `content/essays/`. Each file has an `id` and a `paragraphs` array.
 - **Add a Framework essay:** create a JSON file in `content/essays/`, then add its ID to the `order` array and its metadata to `entries` in `content/framework-index.json`. Set its `source` to the path, such as `content/essays/p1-5.json`. Use the matching Part name in the `part` field.
@@ -49,7 +42,7 @@ A lightweight static website deployed by Cloudflare Pages from the repository ro
 - **Framework reader and citation display:** edit `assets/scripts/framework-reader.js`.
 - **Bibliography rendering:** edit `assets/scripts/references.js`.
 
-The six homepage photographs are stored locally in `assets/images/` as WebP files. The homepage uses a soft gradient overlay so the text fades naturally into each image.
+The six homepage photographs are served from the Unsplash image CDN. Each card has a backup URL; if both image requests fail, the script hides the broken image and retains a neutral background. The cards use a soft white gradient so each photograph fades naturally into the text.
 
 ## Publish your edits
 
