@@ -515,3 +515,85 @@ body{background:#fff;color:var(--ink)}
   #reader-toc .toc-part-overview{font-size:14px}
   #reader-toc .toc-part-items a{font-size:13px}
 }
+
+
+/* References page: compact header and immediate bibliography start */
+.references-page-intro{
+  min-height:0!important;
+  padding:38px clamp(24px,7vw,100px) 10px!important;
+}
+.references-page-intro .eyebrow{margin:0 0 8px}
+.references-page-intro .references-title{
+  margin:0 0 10px;
+  color:#173451;
+  font:600 clamp(32px,3.6vw,44px)/1.18 'Source Serif 4',Georgia,serif;
+  letter-spacing:-.35px;
+}
+.references-page-intro .simple-description{
+  margin:0;
+  max-width:750px;
+  color:#5a6879;
+  font-size:14px;
+  line-height:1.7;
+}
+.references-wrap{
+  padding-top:12px!important;
+  padding-bottom:54px!important;
+  max-width:1040px;
+}
+.bibliography{margin:0 0 30px;padding:0}
+.bibliography li{
+  grid-template-columns:44px minmax(0,1fr) 24px;
+  align-items:start;
+  gap:12px;
+  padding:14px 0;
+  color:#33445a;
+  font-size:14px;
+  line-height:1.72;
+  scroll-margin-top:104px;
+}
+.bibliography li:target{
+  background:#f3f6fa;
+  box-shadow:inset 3px 0 #426b99;
+  padding-left:10px;
+  padding-right:8px;
+}
+.ref-number{
+  padding-top:0;
+  color:#315d8d;
+  font:600 13px/1.72 'DM Sans',sans-serif;
+  font-variant-numeric:tabular-nums;
+}
+.back-to-top{padding-top:2px;font-size:13px}
+@media(max-width:560px){
+  .references-page-intro{padding:30px 18px 8px!important}
+  .references-page-intro .references-title{font-size:34px}
+  .references-wrap{padding:8px 18px 42px!important}
+  .bibliography li{grid-template-columns:38px minmax(0,1fr) 20px;gap:8px;font-size:13px}
+}
+
+/* Inline citations use normal baseline text rather than superscripts */
+.framework-workspace .essay-body a.citation,
+.essay-body a.citation,
+.reader-article a.citation{
+  display:inline;
+  position:static;
+  vertical-align:baseline!important;
+  font-family:inherit!important;
+  font-size:.92em!important;
+  font-weight:600!important;
+  line-height:inherit!important;
+  letter-spacing:0;
+  padding:0;
+  margin:0;
+  color:#24588b!important;
+  text-decoration:underline;
+  text-decoration-color:rgba(36,88,139,.35);
+  text-underline-offset:2px;
+}
+.framework-workspace .essay-body a.citation:hover,
+.essay-body a.citation:hover,
+.reader-article a.citation:hover{
+  color:#123b66!important;
+  text-decoration-color:currentColor;
+}
