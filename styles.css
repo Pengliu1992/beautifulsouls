@@ -93,12 +93,27 @@
   .site-footer{flex-direction:row;align-items:center}
 }
 
-
-/* Homepage highlights: intentionally one full-width card per row */
-.home-highlights{max-width:1340px}
-.highlight-grid{grid-template-columns:minmax(0,1fr)!important;gap:18px}
-.highlight-card{min-height:218px}
+/* Homepage: two cards per row, with the image leading each card */
+.home-highlights{max-width:1600px}
+.highlight-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:20px 22px}
+.highlight-card{grid-template-columns:minmax(155px,38%) minmax(0,1fr);min-height:222px}
+.highlight-card img{grid-column:1;grid-row:1;min-height:176px;max-height:205px}
+.highlight-copy{grid-column:2;grid-row:1}
+.highlight-subtitle{display:block;margin:0;color:#5f6a62;font-size:12.5px;line-height:1.78;text-decoration:none;transition:color .18s}
+.highlight-subtitle:hover{color:var(--green);text-decoration:underline;text-decoration-color:#b69a62;text-underline-offset:3px}
+.highlight-subtitle:focus-visible{outline:2px solid var(--green);outline-offset:4px;border-radius:2px}
+.highlight-copy h2{margin-bottom:10px}
+@media(max-width:1100px){
+  .highlight-grid{gap:16px}
+  .highlight-card{grid-template-columns:minmax(130px,34%) minmax(0,1fr);gap:16px;padding:18px}
+}
 @media(max-width:850px){
-  .highlight-grid{grid-template-columns:minmax(0,1fr)!important}
-  .highlight-card{min-height:200px}
+  .highlight-grid{grid-template-columns:minmax(0,1fr)!important;gap:14px}
+  .highlight-card{grid-template-columns:minmax(170px,34%) minmax(0,1fr);min-height:205px}
+}
+@media(max-width:560px){
+  .highlight-card{grid-template-columns:1fr;gap:15px;padding:17px}
+  .highlight-card img{grid-column:1;grid-row:1;height:180px;min-height:180px;max-height:180px}
+  .highlight-copy{grid-column:1;grid-row:2}
+  .highlight-subtitle{font-size:12.5px}
 }
