@@ -43,7 +43,7 @@
     const titleSpan=document.createElement('span');
     titleSpan.className='toc-link-title';
     titleSpan.textContent=label;
-    link.append(numberSpan,titleSpan);
+    link.append(numberSpan,document.createTextNode(' '),titleSpan);
   }
 
   function buildContents(){
@@ -95,7 +95,7 @@
       list.className='toc-part-items';
       list.id='toc-items-'+groupIndex;
       list.hidden=groupIndex!==0;
-      ids.filter(id=>id!==openingId).forEach(id=>{
+      ids.filter(id=>id!==openingId && index.entries[id].label!=='Part opening').forEach(id=>{
         const entry=index.entries[id];
         const link=document.createElement('a');
         link.href='framework.html?article='+encodeURIComponent(id);

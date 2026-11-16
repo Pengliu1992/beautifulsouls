@@ -432,3 +432,86 @@ body{background:#fff;color:var(--ink)}
 @media(max-width:850px){
   .reader-toc{grid-template-columns:minmax(0,1fr)!important}
 }
+
+
+/* Definitive TOC fix: single fluid text column and inline numbering */
+#reader-toc{
+  display:block!important;
+  width:100%!important;
+  max-width:none!important;
+  min-width:0!important;
+}
+#reader-toc .toc-part-group{
+  display:block!important;
+  width:100%!important;
+  max-width:none!important;
+  min-width:0!important;
+}
+#reader-toc .toc-part-heading{
+  display:flex!important;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:6px;
+  width:100%!important;
+  min-width:0!important;
+}
+#reader-toc .toc-part-overview{
+  display:block!important;
+  flex:1 1 auto;
+  width:auto!important;
+  max-width:none!important;
+  min-width:0!important;
+  white-space:normal!important;
+  word-break:normal!important;
+  overflow-wrap:break-word!important;
+  line-height:1.5;
+}
+#reader-toc .toc-part-toggle{
+  display:flex!important;
+  flex:0 0 26px;
+  width:26px!important;
+  min-width:26px!important;
+  margin:5px 0 0;
+}
+#reader-toc .toc-part-items{
+  display:block;
+  width:100%!important;
+  max-width:none!important;
+  min-width:0!important;
+  padding:4px 0 5px 14px!important;
+}
+#reader-toc .toc-part-items[hidden]{display:none!important}
+#reader-toc .toc-part-items a{
+  display:block!important;
+  width:100%!important;
+  max-width:none!important;
+  min-width:0!important;
+  box-sizing:border-box;
+  padding:7px 9px!important;
+  white-space:normal!important;
+  word-break:normal!important;
+  overflow-wrap:break-word!important;
+  line-height:1.52!important;
+}
+#reader-toc .toc-number{
+  display:inline!important;
+  width:auto!important;
+  min-width:0!important;
+  margin:0 7px 0 0;
+  color:#315d8d;
+  font-weight:700;
+  white-space:nowrap!important;
+}
+#reader-toc .toc-link-title{
+  display:inline!important;
+  width:auto!important;
+  min-width:0!important;
+  white-space:normal!important;
+  word-break:normal!important;
+  overflow-wrap:break-word!important;
+}
+@media(max-width:850px){
+  #reader-toc{grid-template-columns:none!important}
+  #reader-toc .toc-part-overview{font-size:14px}
+  #reader-toc .toc-part-items a{font-size:13px}
+}
