@@ -92,3 +92,13 @@
   .about-copy p:not(.eyebrow){font-size:15px}
   .site-footer{flex-direction:row;align-items:center}
 }
+
+
+/* Homepage highlights: intentionally one full-width card per row */
+.home-highlights{max-width:1340px}
+.highlight-grid{grid-template-columns:minmax(0,1fr)!important;gap:18px}
+.highlight-card{min-height:218px}
+@media(max-width:850px){
+  .highlight-grid{grid-template-columns:minmax(0,1fr)!important}
+  .highlight-card{min-height:200px}
+}
