@@ -20,8 +20,6 @@
       "title": "The Creator: Ultimate Ground, Origin, and Cause",
       "part": "Part I",
       "label": "Part opening",
-      "previous": null,
-      "next": "p1-1",
       "source": "essays/part1.json"
     },
     "p1-1": {
@@ -29,8 +27,6 @@
       "title": "Creator and Creation: A Relationship of Fulfillment",
       "part": "Part I",
       "label": "1.1",
-      "previous": "part1",
-      "next": "p1-2",
       "source": "essays/p1-1.json"
     },
     "p1-2": {
@@ -38,8 +34,6 @@
       "title": "The Yearning for Oneness",
       "part": "Part I",
       "label": "1.2",
-      "previous": "p1-1",
-      "next": "p1-3",
       "source": "essays/p1-2.json"
     },
     "p1-3": {
@@ -47,8 +41,6 @@
       "title": "Visible and Invisible: Two Expressions of Creation",
       "part": "Part I",
       "label": "1.3",
-      "previous": "p1-2",
-      "next": "p1-4",
       "source": "essays/p1-3.json"
     },
     "p1-4": {
@@ -56,8 +48,6 @@
       "title": "The Creator Known Through Creation",
       "part": "Part I",
       "label": "1.4",
-      "previous": "p1-3",
-      "next": "part2",
       "source": "essays/p1-4.json"
     },
     "part2": {
@@ -65,8 +55,6 @@
       "title": "Humanity: Heaven’s Breath in Earthly Clay",
       "part": "Part II",
       "label": "Part opening",
-      "previous": "p1-4",
-      "next": "p2-1",
       "source": "essays/part2.json"
     },
     "p2-1": {
@@ -74,8 +62,6 @@
       "title": "The Gift of Likeness",
       "part": "Part II",
       "label": "2.1",
-      "previous": "part2",
-      "next": "p2-2",
       "source": "essays/p2-1.json"
     },
     "p2-2": {
@@ -83,8 +69,6 @@
       "title": "Relationship and Oneness: Humanity’s Twin Yearnings",
       "part": "Part II",
       "label": "2.2",
-      "previous": "p2-1",
-      "next": "p2-3",
       "source": "essays/p2-2.json"
     },
     "p2-3": {
@@ -92,8 +76,6 @@
       "title": "Soul and Body: A Life on Mission",
       "part": "Part II",
       "label": "2.3",
-      "previous": "p2-2",
-      "next": "p2-4",
       "source": "essays/p2-3.json"
     },
     "p2-4": {
@@ -101,8 +83,6 @@
       "title": "Free Will and Intelligence: Gifts and Responsibilities",
       "part": "Part II",
       "label": "2.4",
-      "previous": "p2-3",
-      "next": "p2-5",
       "source": "essays/p2-4.json"
     },
     "p2-5": {
@@ -110,8 +90,6 @@
       "title": "Demands and Rewards: Existence with Purpose",
       "part": "Part II",
       "label": "2.5",
-      "previous": "p2-4",
-      "next": "p2-6",
       "source": "essays/p2-5.json"
     },
     "p2-6": {
@@ -119,8 +97,6 @@
       "title": "Divine Ownership and Human Possession",
       "part": "Part II",
       "label": "2.6",
-      "previous": "p2-5",
-      "next": "p2-7",
       "source": "essays/p2-6.json"
     },
     "p2-7": {
@@ -128,8 +104,6 @@
       "title": "Hardship, Suffering, and Greater Understanding",
       "part": "Part II",
       "label": "2.7",
-      "previous": "p2-6",
-      "next": null,
       "source": "essays/p2-7.json"
     }
   }

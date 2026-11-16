@@ -1,1 +1,16 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f4f0e7"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><meta name="description" content="Read the original essays in the Beautiful Souls Framework, with previous and next navigation."><title>Read the Framework | Beautiful Souls</title><script defer src="essays.js"></script></head><body><header class="site-header" id="top"><a class="brand" href="index.html" aria-label="Beautiful Souls home"><span class="brand-mark" aria-hidden="true">✳</span><span>Beautiful Souls</span></a><button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="site-navigation">☰</button><nav class="nav" id="site-navigation"><a href="index.html">Home</a><a href="framework.html">The Framework</a><a href="explorations.html">Explorations</a><a href="modern-life.html">Modern Life</a><a href="about.html">About</a></nav></header><main><section class="reader-shell"><div class="reader-breadcrumb"><a href="framework.html">The Framework</a><span aria-hidden="true">/</span><span id="reader-part">Part I</span></div><div class="reader-layout"><aside class="reader-aside"><p class="eyebrow">READING PATH</p><div id="reader-toc" class="reader-toc"></div><a class="aside-link" href="framework.html">← All Framework contents</a></aside><article class="reader-article"><div class="reader-meta" id="reader-meta"></div><h1 id="reader-title">Loading…</h1><div class="reader-rule"></div><nav id="reader-top-nav" class="book-nav" aria-label="Essay navigation"></nav><div id="reader-body" class="essay-body"></div><div class="reader-endnote"><a href="references.html">View the manuscript bibliography →</a></div><nav id="reader-bottom-nav" class="book-nav book-nav-bottom" aria-label="Essay navigation"></nav></article></div></section></main><footer class="site-footer"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">✳</span>Beautiful Souls</a><span class="footer-tagline">A journey toward a meaningful life.</span><span>© <span data-year></span> Beautiful Souls</span></footer><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redirecting | Beautiful Souls</title>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const target = new URL('framework.html', location.href);
+    const article = params.get('article');
+    if (article) target.searchParams.set('article', article);
+    location.replace(target.href);
+  </script>
+</head>
+<body><p>Opening The Framework… <a href="framework.html">Continue</a></p></body>
+</html>
