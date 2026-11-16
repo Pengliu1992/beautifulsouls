@@ -15,6 +15,13 @@ A lightweight static website deployed by Cloudflare Pages from the repository ro
 ├── README.md
 ├── assets/
 │   ├── styles/site.css
+│   ├── images/
+│   │   ├── creator-sunrise.webp
+│   │   ├── oneness-tree.webp
+│   │   ├── human-family.webp
+│   │   ├── freedom-hiker.webp
+│   │   ├── purpose-mountains.webp
+│   │   └── life-lake.webp
 │   └── scripts/
 │       ├── site.js
 │       ├── framework-reader.js
@@ -23,26 +30,23 @@ A lightweight static website deployed by Cloudflare Pages from the repository ro
     ├── framework-index.json
     ├── references.json
     └── essays/
-        ├── part1.json
-        ├── p1-1.json … p1-4.json
-        ├── part2.json
-        └── p2-1.json … p2-7.json
 ```
 
 ## Where to edit
 
-- **Home page:** edit the six cards in `index.html`. Each card contains its heading link, concise summary, primary image URL, backup image URL, and image `alt` text. Replace the `src` and `data-fallback` values to change a photo.
+- **Home page:** edit the six cards in `index.html`. The title is the link to the Framework; the summary below is plain text.
+- **Homepage photographs:** replace the corresponding WebP file in `assets/images/`. Keep the same filename and dimensions/aspect ratio to preserve the layout.
 - **Other page text:** edit `explorations.html`, `modern-life.html`, or `about.html`.
-- **Framework essay wording:** edit the corresponding JSON file in `content/essays/`. Each file has an `id` and a `paragraphs` array.
-- **Add a Framework essay:** create a JSON file in `content/essays/`, then add its ID to the `order` array and its metadata to `entries` in `content/framework-index.json`. Set its `source` to the path, such as `content/essays/p1-5.json`. Use the matching Part name in the `part` field.
-- **Essay titles and contents order:** edit `content/framework-index.json`. The order in its `order` array controls the navigation sequence.
-- **Bibliography:** edit `content/references.json`. Keep reference numbers unique and aligned with citations such as `[12]` in essay text.
+- **Framework essay wording:** edit the corresponding JSON file in `content/essays/`.
+- **Add a Framework essay:** create a JSON file in `content/essays/`, then add its ID to the `order` array and its metadata to `entries` in `content/framework-index.json`.
+- **Essay titles and contents order:** edit `content/framework-index.json`.
+- **Bibliography:** edit `content/references.json`.
 - **Visual design and fonts:** edit `assets/styles/site.css`.
 - **Shared navigation and footer behavior:** edit `assets/scripts/site.js`.
 - **Framework reader and citation display:** edit `assets/scripts/framework-reader.js`.
 - **Bibliography rendering:** edit `assets/scripts/references.js`.
 
-The six homepage photographs are served from the Unsplash image CDN. Each card has a backup URL; if both image requests fail, the script hides the broken image and retains a neutral background. The cards use a soft white gradient so each photograph fades naturally into the text.
+When editing `assets/styles/site.css`, increment the version in the stylesheet links on all six HTML pages so browsers fetch the new styles.
 
 ## Publish your edits
 
