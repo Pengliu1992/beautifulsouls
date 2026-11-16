@@ -685,3 +685,28 @@ body{background:#fff;color:var(--ink)}
 .references-wrap{
   padding-top:8px!important;
 }
+
+
+/* Framework: narrow the essay panel by 25%, keeping the Contents rail unchanged */
+@media(min-width:1200px){
+  .framework-workspace{
+    width:calc(75% + 132px)!important;
+    max-width:100%;
+    margin-left:0;
+    margin-right:auto;
+  }
+}
+@media(min-width:851px) and (max-width:1199px){
+  .framework-workspace{
+    width:calc(75% + 95px)!important;
+    max-width:100%;
+    margin-left:0;
+    margin-right:auto;
+  }
+}
+@media(max-width:850px){
+  .framework-workspace{
+    width:100%!important;
+    max-width:none;
+  }
+}
