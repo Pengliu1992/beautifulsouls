@@ -725,3 +725,28 @@ body{background:#fff;color:var(--ink)}
     margin-right:auto!important;
   }
 }
+
+
+/* Framework reader title: reduce heading size by 20% without changing body copy */
+.framework-workspace .reader-article h1{
+  font-size:clamp(30.4px,2vw,33.6px)!important;
+}
+.framework-workspace .reader-article.part-opening h1{
+  font-size:clamp(34.4px,2.4vw,39.2px)!important;
+}
+@media(max-width:850px){
+  .framework-workspace .reader-article h1{
+    font-size:clamp(24.8px,4vw,31.2px)!important;
+  }
+  .framework-workspace .reader-article.part-opening h1{
+    font-size:clamp(28.8px,4.4vw,34.4px)!important;
+  }
+}
+@media(max-width:560px){
+  .framework-workspace .reader-article h1{
+    font-size:24.8px!important;
+  }
+  .framework-workspace .reader-article.part-opening h1{
+    font-size:28.8px!important;
+  }
+}
