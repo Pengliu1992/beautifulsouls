@@ -20,91 +20,130 @@
       "title": "The Creator: Ultimate Ground, Origin, and Cause",
       "part": "Part I",
       "label": "Part opening",
-      "source": "content/essays/part1.json"
+      "source": "content/essays/part1.json",
+      "summary": "Creation cannot explain its own existence. It points beyond itself to the Creator as the first cause and ground of being.",
+      "image": "assets/images/framework/part1.webp",
+      "imageAlt": "Cosmic and natural landscape representing the Creator as the ground and origin of existence"
     },
     "p1-1": {
       "id": "p1-1",
       "title": "Creator and Creation: A Relationship of Fulfillment",
       "part": "Part I",
       "label": "1.1",
-      "source": "content/essays/p1-1.json"
+      "source": "content/essays/p1-1.json",
+      "summary": "The Creator's fullness overflows into creation. Creation, in turn, finds meaning through relationship with its source.",
+      "image": "assets/images/framework/p1-1.webp",
+      "imageAlt": "An abundant natural spring flowing into a flourishing landscape"
     },
     "p1-2": {
       "id": "p1-2",
       "title": "The Yearning for Oneness",
       "part": "Part I",
       "label": "1.2",
-      "source": "content/essays/p1-2.json"
+      "source": "content/essays/p1-2.json",
+      "summary": "All things come from one source and yearn for reunion. The Creator reaches outward as creation turns inward.",
+      "image": "assets/images/framework/p1-2.webp",
+      "imageAlt": "A lone person in prayer overlooking a vast mountain valley at sunrise"
     },
     "p1-3": {
       "id": "p1-3",
       "title": "Visible and Invisible: Two Expressions of Creation",
       "part": "Part I",
       "label": "1.3",
-      "source": "content/essays/p1-3.json"
+      "source": "content/essays/p1-3.json",
+      "summary": "Visible matter and invisible order belong together. One gives the other a place to be expressed.",
+      "image": "assets/images/framework/p1-3.webp",
+      "imageAlt": "A flowering tree in a harmonious natural landscape"
     },
     "p1-4": {
       "id": "p1-4",
       "title": "The Creator Known Through Creation",
       "part": "Part I",
       "label": "1.4",
-      "source": "content/essays/p1-4.json"
+      "source": "content/essays/p1-4.json",
+      "summary": "The Creator exceeds our full understanding, yet is not absent. Creation bears traces of divine intelligence, beauty, goodness, and order.",
+      "image": "assets/images/framework/p1-4.webp",
+      "imageAlt": "Scholars studying the night sky through a telescope"
     },
     "part2": {
       "id": "part2",
       "title": "Humanity: Heaven’s Breath in Earthly Clay",
       "part": "Part II",
       "label": "Part opening",
-      "source": "content/essays/part2.json"
+      "source": "content/essays/part2.json",
+      "summary": "Humanity unites the visible body and invisible soul in one living being. Through embodied action, spirit and will take form in the world.",
+      "image": "assets/images/framework/part2.webp",
+      "imageAlt": "Adam in the Garden of Eden surrounded by living creation"
     },
     "p2-1": {
       "id": "p2-1",
       "title": "The Gift of Likeness",
       "part": "Part II",
       "label": "2.1",
-      "source": "content/essays/p2-1.json"
+      "source": "content/essays/p2-1.json",
+      "summary": "The human soul seeks meaning, purpose, truth, and freedom. We flourish as we reflect the Creator's nurturing goodness in our lives.",
+      "image": "assets/images/framework/p2-1.webp",
+      "imageAlt": "A thoughtful person considering meaning, moral values, and a higher calling"
     },
     "p2-2": {
       "id": "p2-2",
       "title": "Relationship and Oneness: Humanity’s Twin Yearnings",
       "part": "Part II",
       "label": "2.2",
-      "source": "content/essays/p2-2.json"
+      "source": "content/essays/p2-2.json",
+      "summary": "We seek relationship with the Creator and oneness with one another. Love expands from the self and family to all humanity.",
+      "image": "assets/images/framework/p2-2.webp",
+      "imageAlt": "A family embracing beneath a starry night sky"
     },
     "p2-3": {
       "id": "p2-3",
       "title": "Soul and Body: A Life on Mission",
       "part": "Part II",
       "label": "2.3",
-      "source": "content/essays/p2-3.json"
+      "source": "content/essays/p2-3.json",
+      "summary": "The soul gives life its direction; the body makes action possible. A meaningful life joins both in service of a calling.",
+      "image": "assets/images/framework/p2-3.webp",
+      "imageAlt": "A busy office worker reflecting on his life purpose"
     },
     "p2-4": {
       "id": "p2-4",
       "title": "Free Will and Intelligence: Gifts and Responsibilities",
       "part": "Part II",
       "label": "2.4",
-      "source": "content/essays/p2-4.json"
+      "source": "content/essays/p2-4.json",
+      "summary": "Free will gives us the power to choose. Intelligence helps us learn from consequences and grow in wisdom.",
+      "image": "assets/images/framework/p2-4.webp",
+      "imageAlt": "A person at a crossroads between peace and destruction"
     },
     "p2-5": {
       "id": "p2-5",
       "title": "Demands and Rewards: Existence with Purpose",
       "part": "Part II",
       "label": "2.5",
-      "source": "content/essays/p2-5.json"
+      "source": "content/essays/p2-5.json",
+      "summary": "Life brings real needs and real pleasures, but neither is its ultimate purpose. Our calling should guide how we work and enjoy.",
+      "image": "assets/images/framework/p2-5.webp",
+      "imageAlt": "A family working together in a garden and enjoying the rewards of their work"
     },
     "p2-6": {
       "id": "p2-6",
       "title": "Divine Ownership and Human Possession",
       "part": "Part II",
       "label": "2.6",
-      "source": "content/essays/p2-6.json"
+      "source": "content/essays/p2-6.json",
+      "summary": "The Creator holds ultimate ownership, while human possession remains a real right. Stewardship calls us to care for and share what we hold.",
+      "image": "assets/images/framework/p2-6.webp",
+      "imageAlt": "A farmer sharing the harvest with a neighboring family"
     },
     "p2-7": {
       "id": "p2-7",
       "title": "Hardship, Suffering, and Greater Understanding",
       "part": "Part II",
       "label": "2.7",
-      "source": "content/essays/p2-7.json"
+      "source": "content/essays/p2-7.json",
+      "summary": "Hardship can reveal what we do not yet understand. Recording and sharing those lessons helps prevent harm from recurring.",
+      "image": "assets/images/framework/p2-7.webp",
+      "imageAlt": "Flood survivors, a scholar recording lessons, and children reading in a library"
     }
   }
 }
