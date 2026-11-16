@@ -845,3 +845,34 @@ body{background:#fff;color:var(--ink)}
     letter-spacing:2.6px;
   }
 }
+
+
+/* Consistent typography for the Explorations, About, and Modern Life pages */
+.simple-page-title{
+  margin:0 0 22px;
+  color:#173451;
+  font:700 20px/1.35 'DM Sans',sans-serif;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+.simple-page-body{
+  max-width:780px;
+  margin:0;
+  color:#3d4d63;
+  font:400 16px/1.85 'DM Sans',sans-serif;
+}
+.simple-page-status{
+  margin:0;
+  color:#5c6878;
+  font:600 15px/1.7 'DM Sans',sans-serif;
+  letter-spacing:1.1px;
+}
+@media(max-width:560px){
+  .simple-page-title{
+    font-size:20px;
+    letter-spacing:1.6px;
+    margin-bottom:18px;
+  }
+  .simple-page-body{font-size:16px;line-height:1.8}
+  .simple-page-status{font-size:14px}
+}
