@@ -1,29 +1,53 @@
-Beautiful Souls — website source
+# Beautiful Souls
 
-A static editorial website for Beautiful Souls, built with HTML, CSS and vanilla JavaScript and deployed with Cloudflare Pages from the main branch.
+A lightweight static website deployed by Cloudflare Pages from the repository root. It uses plain HTML, CSS, JavaScript and JSON; there is no build step or framework.
 
-Main navigation
-- Home
-- The Framework
-- Explorations
-- Modern Life
-- About
+## Repository layout
 
-Home
-The Home page contains six image-led highlights in a two-column, three-row grid. Each card has a short title, a concise statement, an image and a link to the most relevant Framework reading.
+```text
+/
+├── index.html
+├── framework.html
+├── explorations.html
+├── modern-life.html
+├── about.html
+├── references.html
+├── README.md
+├── assets/
+│   ├── styles/site.css
+│   └── scripts/
+│       ├── site.js
+│       ├── framework-reader.js
+│       └── references.js
+└── content/
+    ├── framework-index.json
+    ├── references.json
+    └── essays/
+        ├── part1.json
+        ├── p1-1.json … p1-4.json
+        ├── part2.json
+        └── p2-1.json … p2-7.json
+```
 
-The Framework
-The Framework is a documentation-style reader. Its left contents panel has independently collapsible Part I and Part II sections; the right panel displays the selected Part opening or essay. In-text citations link to their numbered entries in the full references page. The reader has no previous/next controls.
+## Where to edit
 
-The site preserves the two Part openings and all 11 numbered essays from the supplied manuscript. Part III is not displayed.
+- **Home page:** edit the six cards in `index.html`. The heading is the hyperlink; the description below it is plain text. Each card also has an image URL and an image `alt` description.
+- **Other page text:** edit `explorations.html`, `modern-life.html`, or `about.html`.
+- **Framework essay wording:** edit the corresponding JSON file in `content/essays/`. Each file has an `id` and a `paragraphs` array.
+- **Add a Framework essay:** create a JSON file in `content/essays/`, then add its ID to the `order` array and its metadata to `entries` in `content/framework-index.json`. Set its `source` to the path, such as `content/essays/p1-5.json`. Use the matching Part name in the `part` field.
+- **Essay titles and contents order:** edit `content/framework-index.json`. The order in its `order` array controls the navigation sequence.
+- **Bibliography:** edit `content/references.json`. Keep reference numbers unique and aligned with citations such as `[12]` in essay text.
+- **Visual design and fonts:** edit `assets/styles/site.css`.
+- **Shared navigation and footer behavior:** edit `assets/scripts/site.js`.
+- **Framework reader and citation display:** edit `assets/scripts/framework-reader.js`.
+- **Bibliography rendering:** edit `assets/scripts/references.js`.
 
-Files
-- index.html, framework.html, explorations.html, modern-life.html, about.html — site sections
-- essay.html — compatibility redirect to the Framework reader for older essay links
-- essays-index.json and essays/ — reader index and essay text
-- essays.js — collapsible navigation and reader behavior
-- references.html, references.json, references.js — bibliography and citation anchors
-- styles.css, script.js — shared design and behavior
+The six current photographs are loaded from Unsplash, so they are not stored in this repository.
 
-Deploy
-Cloudflare Pages is configured for a plain static site: no build command; repository root as the build output directory. Commits to main trigger automatic deployments.
+## Publish your edits
+
+1. Edit only the relevant page, script, stylesheet or JSON file.
+2. Check JSON syntax and confirm any new essay path is present in `content/framework-index.json`.
+3. Commit and push to `main`. Cloudflare Pages should deploy automatically.
+
+Cloudflare Pages configuration: leave the build command blank and use the repository root as the build output directory.

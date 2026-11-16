@@ -61,7 +61,7 @@
   }
   async function initialize(){
     try{
-      index=await getJson('essays-index.json');
+      index=await getJson('content/framework-index.json');
       if(!Array.isArray(index.order)||!index.entries)throw new Error('Unexpected essay index structure');
       buildContents();
       addEventListener('popstate',event=>loadArticle(event.state?.article||new URLSearchParams(location.search).get('article')||'part1'));
