@@ -597,3 +597,91 @@ body{background:#fff;color:var(--ink)}
   color:#123b66!important;
   text-decoration-color:currentColor;
 }
+
+
+/* Framework layout refinement: wider contents, fuller essay reading width */
+@media(min-width:1200px){
+  .framework-shell{
+    max-width:1840px;
+    padding-left:clamp(20px,2.4vw,42px);
+    padding-right:clamp(20px,2.4vw,42px);
+  }
+  .framework-workspace{
+    grid-template-columns:420px minmax(0,1fr)!important;
+    gap:24px;
+  }
+}
+@media(min-width:851px) and (max-width:1199px){
+  .framework-workspace{
+    grid-template-columns:360px minmax(0,1fr)!important;
+    gap:20px;
+  }
+}
+
+/* Clear hierarchy: Part/section headings stand above subsection links */
+#reader-toc .toc-part-overview{
+  font-size:15.5px!important;
+  line-height:1.42!important;
+  font-weight:700!important;
+}
+#reader-toc .toc-part-items{
+  padding-left:8px!important;
+}
+#reader-toc .toc-part-items a{
+  font-size:13.2px!important;
+  line-height:1.46!important;
+  padding:6px 8px!important;
+}
+#reader-toc .toc-number{
+  font-size:12px!important;
+  margin-right:6px!important;
+}
+
+/* Use the essay pane's full width and reduce the unused right margin */
+.framework-workspace .reader-article{
+  padding:clamp(34px,3.2vw,54px) clamp(24px,2.1vw,36px) 44px!important;
+}
+.framework-workspace .reader-article h1{
+  max-width:none!important;
+  font-size:clamp(38px,2.5vw,42px)!important;
+  line-height:1.22!important;
+}
+.framework-workspace .reader-article.part-opening h1{
+  font-size:clamp(43px,3vw,49px)!important;
+  line-height:1.18!important;
+}
+.framework-workspace .essay-body{
+  max-width:none!important;
+  width:100%;
+  font-size:18px;
+  line-height:1.82;
+}
+@media(max-width:850px){
+  .framework-workspace .reader-article{
+    padding:30px 24px 36px!important;
+  }
+  .framework-workspace .reader-article h1{
+    font-size:clamp(31px,5vw,39px)!important;
+  }
+  .framework-workspace .reader-article.part-opening h1{
+    font-size:clamp(36px,5.5vw,43px)!important;
+  }
+  .framework-workspace .essay-body{
+    font-size:17px;
+  }
+}
+@media(max-width:560px){
+  .framework-workspace .reader-article{
+    padding:24px 16px 30px!important;
+  }
+  #reader-toc .toc-part-overview{font-size:14px!important}
+  #reader-toc .toc-part-items a{font-size:12.5px!important}
+}
+
+/* References: the page title leads directly into the bibliography */
+.references-page-intro{
+  padding-bottom:4px!important;
+}
+.references-wrap{
+  padding-top:8px!important;
+}

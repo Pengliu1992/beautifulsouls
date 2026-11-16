@@ -23,7 +23,7 @@
     try{
       const data=await getJson(entry.source),article={...entry,...data};
       document.title=article.title+' | The Framework | Beautiful Souls';
-      partLabel.textContent=article.part;meta.textContent=article.label==='Part opening'?article.part.toUpperCase()+' · OVERVIEW':article.part.toUpperCase()+' · SECTION '+article.label;title.textContent=article.title;
+      partLabel.textContent=article.part;meta.textContent=article.label==='Part opening'?article.part.toUpperCase()+' · OVERVIEW':article.part.toUpperCase()+' · SECTION '+article.label;title.textContent=article.title;document.querySelector('.reader-article')?.classList.toggle('part-opening',article.label==='Part opening');
       body.replaceChildren();
       (article.paragraphs||[]).forEach(text=>{const p=document.createElement('p');p.innerHTML=citations(text);body.appendChild(p);});
       toc.querySelectorAll('a[data-article-id]').forEach(a=>{
