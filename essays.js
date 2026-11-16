@@ -39,15 +39,15 @@
   function buildContents(){
     const byPart=new Map();
     index.order.forEach(id=>{const e=index.entries[id];if(!e)return;if(!byPart.has(e.part))byPart.set(e.part,[]);byPart.get(e.part).push(id);});
-    [...byPart.entries()].forEach(([part,ids,n])=>{
+    [...byPart.entries()].forEach(([part,ids],groupIndex)=>{
       const group=document.createElement('section');group.className='toc-part-group';
       const button=document.createElement('button');button.type='button';button.className='toc-part-toggle';
-      button.setAttribute('aria-expanded',n===0?'true':'false');button.setAttribute('aria-controls','toc-items-'+n);
+      button.setAttribute('aria-expanded',groupIndex===0?'true':'false');button.setAttribute('aria-controls','toc-items-'+groupIndex);
       const arrow=document.createElement('span');arrow.className='toc-chevron';arrow.setAttribute('aria-hidden','true');arrow.textContent='⌄';
       const name=document.createElement('span');name.className='toc-part-name';
       name.textContent=part==='Part I'?'Part I — The Creator: Ultimate Ground, Origin, and Cause':'Part II — Humanity: Heaven’s Breath in Earthly Clay';
       button.append(arrow,name);
-      const list=document.createElement('div');list.className='toc-part-items';list.id='toc-items-'+n;list.hidden=n!==0;
+      const list=document.createElement('div');list.className='toc-part-items';list.id='toc-items-'+n;list.hidden=groupIndex!==0;
       ids.forEach(id=>{
         const e=index.entries[id],a=document.createElement('a');a.href='framework.html?article='+encodeURIComponent(id);
         a.dataset.articleId=id;a.textContent=e.title;
